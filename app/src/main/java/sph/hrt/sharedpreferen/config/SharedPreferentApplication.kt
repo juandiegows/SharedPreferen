@@ -1,8 +1,6 @@
 package sph.hrt.sharedpreferen.config
 
 import android.app.Application
-import android.content.Intent
-import sph.hrt.sharedpreferen.MainActivity
 
 class SharedPreferentApplication : Application() {
     companion object {
@@ -10,8 +8,7 @@ class SharedPreferentApplication : Application() {
     }
 
     override fun onCreate() {
-        prefs = Prefs(this)
         super.onCreate()
-        startActivity(Intent(this, MainActivity::class.java))
+        prefs = Prefs(this)
     }
 }
